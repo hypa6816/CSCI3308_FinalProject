@@ -9,50 +9,43 @@ Zhixing Chang
 Rohith Chintalapally
 Jackson Mediavilla
 
-Can we instead make a cover page for the information above this red text? Would that be better? Any ideas guys? -Sara
-I think that is a good idea, yes - Jackson
-Yeah that’s fine by me. - Igor
 
-Introduction: (Sara)
+Introduction: 
     Team Course Warriors seeks to build an application called RateMyCourse. This application will be created to help students choose courses at the University of Colorado at Boulder. By utilizing the information provided from RateMyCourse, a student should feel more prepared to enroll in or drop out of courses as well as have a better understanding of course offerings. Team Course Warriors will base its rating system on Faculty Course Questionnaire responses and provide a space where users can give feedback on courses they have previously taken. 
 
 Vision Statement: 
 Our vision is to give the students of CU an honest overview of the courses offered at CU, empowering each and every student to make the most of their college careers by taking the courses that are right for them.
 
 
-Description (Sara and Alec): 
+Description: 
 
 The web application RateMyCourse will consist of an overview of every course available at the University of Colorado at Boulder. Each course overview will contain a course rating, professor rating, and average GPA, along with course credit hours, class distribution size, and a space for honest reviews which students who use the app will be encouraged to use. All information provided in the course overviews will be easily readable, as our apps main function will be to visualize the data available by converting bland spreadsheet data to beautiful infographics. Every course will be easily found through a custom search engine written specifically for CU courses. RateMyCourse will also contain a function to compare two courses side by side, providing a user friendly interface for students deciding between multiple classes. 
 In terms of the RateMyCourse interface, Team Course Warriors seeks to build a well-organized user interface that consists of drop down menus and tabs for fluid functionality. The user interface will be built with a focus on simplicity, readability, and efficiency. Any student at CU Boulder should be able to access information on his or her courses without spending an excessive amount of time. To accomplish these goals, we plan on creating an easy to use web application using the google API, which will provide a base template for the user interface of our application. Given the relatively small amount of data we will be working with and the infrequency of the updates made to it, we believe managing our database should be simple enough to implement using common coding languages such as Python.
 The data for RateMyCourse will be mostly constructed from an FCQ excel spreadsheet available on the official CU Boulder website and user input.  This information will be poured into our database using a standard in script, and sorted correctly using code in Python. We have high hopes for this project and think those students at CU will benefit greatly from it.
 
-Hey Alec, I rewrote the description. Please review it to see if I’m missing anything or not. The description you wrote is still down below. Thanks, Sara.
-Team, please write comments on what you think is missing from the project description. Thanks.
-
-Hey Sara I edited some of the things in the first two paragraphs you can read over but overall it was great.. The third paragraphed I just tried to beef up by going into specifics but this might not be the best idea considering how early we are in the design process.
     
 
-Motivation: (Sara)
+Motivation:
     The motivation behind RateMyCourse is the fact that detailed information about courses at the University of Colorado at BOulder does not exist in one comprehensive website. Many students at university have a difficult time selecting a course--especially at a large university such as CU Boulder. In 2016, there are a total of 4,845 courses offered at CU Boulder. With so many courses to choose from, a student can easily feel overwhelmed and enroll in a course that is not suited for him/her (especially transfer students and freshmen). Although some information on courses offered at CU Boulder is available at the official school website such as course descriptions and FCQ excel sheets, they either do not convey enough information about the course or are very poorly visualized. Therefore if RateMyCourse is created, students will have able to obtain useful, easily readable information on any course they are interested in. 
 
-Risks: (Tim and Rohith)
+Risks: 
     
-Some of our team members  lack experience with web development and data manipulation, so it is hard for us to complete the work that requires professional knowledge right off the bat.
-It is important for us to know how to deal with large collection of data, in both retrieving and storing.
-Because there are plenty of courses in CU Boulder, it is hard for us to collect all of the data without potentially missing a few.
-Another risk that we will have to deal with is making sure that all of our team members can meet at regularly scheduled times.
-The scope of this project could surpass our abilities as college students with busy schedules and limited experience.
-Our idea is similar to a few websites that already exist, so we have to be careful to not directly imitate any features of other interfaces.
+1. Some of our team members  lack experience with web development and data manipulation, so it is hard for us to complete the work that requires professional knowledge right off the bat.
+2. It is important for us to know how to deal with large collection of data, in both retrieving and storing.
+3. Because there are plenty of courses in CU Boulder, it is hard for us to collect all of the data without potentially missing a few.
+4. Another risk that we will have to deal with is making sure that all of our team members can meet at regularly scheduled times.
+5. The scope of this project could surpass our abilities as college students with busy schedules and limited experience.
+6. Our idea is similar to a few websites that already exist, so we have to be careful to not directly imitate any features of other interfaces.
 
 
 Risk Mitigation Plan (Tim and Rohith)
 
-We can find examples of web development and data manipulation online or get help from people who have diverse skills in web development.
+1. We can find examples of web development and data manipulation online or get help from people who have diverse skills in web development.
  Fortunately, some of our team members have knowledge regarding SQL and some other methods to combat the issue of handling data. 
-We have located an FCQ spreadsheet that has information on every course available at CU and various information about each class.
-In order to combat time conflicts and communicate effectively with each other, our team has a Slack group and we use google docs to be able to edit and add information remotely.
-We have to nail down the parameters of the project before beginning any serious work in order to avoid starting a task that we cannot finish.
-By directly identifying the ideas that separate us from other websites, we can focus our efforts around what makes our idea unique and different.
+2. We have located an FCQ spreadsheet that has information on every course available at CU and various information about each class.
+3. In order to combat time conflicts and communicate effectively with each other, our team has a Slack group and we use google docs to be able to edit and add information remotely.
+4. We have to nail down the parameters of the project before beginning any serious work in order to avoid starting a task that we cannot finish.
+5. By directly identifying the ideas that separate us from other websites, we can focus our efforts around what makes our idea unique and different.
 
 
 Software Development Methodology (Igor and Jackson)
