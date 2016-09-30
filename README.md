@@ -47,11 +47,11 @@
 ## Risk Mitigation Plan:
 
 1. We can find examples of web development and data manipulation online or get help from people who have diverse skills in web development.
- Fortunately, some of our team members have knowledge regarding SQL and some other methods to combat the issue of handling data. 
-2. We have located an FCQ spreadsheet that has information on every course available at CU and various information about each class.
-3. In order to combat time conflicts and communicate effectively with each other, our team has a Slack group and we use google docs to be able to edit and add information remotely.
-4. We have to nail down the parameters of the project before beginning any serious work in order to avoid starting a task that we cannot finish.
-5. By directly identifying the ideas that separate us from other websites, we can focus our efforts around what makes our idea unique and different.
+2. Fortunately, some of our team members have knowledge regarding SQL and some other methods to combat the issue of handling data.
+3. We have located an FCQ spreadsheet that has information on every course available at CU and various information about each class.
+4. In order to combat time conflicts and communicate effectively with each other, our team has a Slack group and we use google docs to be able to edit and add information remotely.
+5. We have to nail down the parameters of the project before beginning any serious work in order to avoid starting a task that we cannot finish.
+6. By directly identifying the ideas that separate us from other websites, we can focus our efforts around what makes our idea unique and different.
 
 
 
