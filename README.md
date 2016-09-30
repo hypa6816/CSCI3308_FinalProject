@@ -60,7 +60,7 @@
    Our team will be following the Agile Software Method. We picked this method because it promotes teamwork and aims to produce working software as opposed to beautiful documentation. An important aspect of Agile teamwork is pair programming. Through pair programming those who are not as experienced with developing software (front end/back end) can be more familiar with the orientation of programming. On days that we pair program, we plan to develop code in two groups of three. One group will focus on the client-side scripting while the other will focus on the server-side scripting. Another advantage of Agile environments is fostering a constantly changing environment. Currently our software’s goal is to provide feedback about courses at CU, but down the road we intend to implement many amazing features into this web application. One of the features includes incorporating your degree audit so students can view which future courses will satisfy degree requirements. Once functionality has been tested at CU, we may expand to other universities as well. Any other input regarding functionality of the application will be gathered through surveys. Surveys will be printed and distributed in a few rooms in the library to get a general feedback. The library is a good setting for students to conduct the survey because it is a time when your courses are concerning to you. 
    
 ## Version Control:
-	In order to have one place to store all code associated with this project, Team Course Warriors will be utilizing GitHub. 
+	Team Course Warriors will be utilizing GitHub to store to all codes associated with this project. 
 
 ## Collaboration Tool:
 	The Collaboration Tool Team Course Warriors will be using to communicate is Slack and email.
