@@ -63,4 +63,4 @@
 	Team Course Warriors will be utilizing GitHub to store to all codes associated with this project. 
 
 ## Collaboration Tool:
-	The Collaboration Tool Team Course Warriors will be using to communicate is Slack and email.
+	The collaboration tool Team Course Warriors will be using to communicate is Slack and email.
