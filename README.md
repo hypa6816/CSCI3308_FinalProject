@@ -2,12 +2,12 @@
 Team: The Course Warriors
 
 Members:
-Igor Banaszuk        
-Alec Martin
-Sara Hyo Park        
-Zhixing Chang
-Rohith Chintalapally
-Jackson Mediavilla
+    Igor Banaszuk        
+    Alec Martin
+    Sara Hyo Park        
+    Zhixing Chang
+    Rohith Chintalapally
+    Jackson Mediavilla
 
 
 Introduction: 
