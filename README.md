@@ -22,8 +22,10 @@
 
 ## Description: 
 
-   The web application RateMyCourse will consist of an overview of every course available at the University of Colorado at Boulder. Each course overview will contain a course rating, professor rating, and average GPA, along with course credit hours, class distribution size, and a space for honest reviews which students who use the app will be encouraged to use. All information provided in the course overviews will be easily readable, as our apps main function will be to visualize the data available by converting bland spreadsheet data to beautiful infographics. Every course will be easily found through a custom search engine written specifically for CU courses. RateMyCourse will also contain a function to compare two courses side by side, providing a user friendly interface for students deciding between multiple classes. 
+   The web application RateMyCourse will consist of an overview of every course available at the University of Colorado at Boulder. Each course overview will contain a course rating, professor rating, and average GPA, along with course credit hours, class distribution size, and a space for honest reviews which students who use the app will be encouraged to use. All information provided in the course overviews will be easily readable, as our apps main function will be to visualize the data available by converting bland spreadsheet data to beautiful infographics. Every course will be easily found through a custom search engine written specifically for CU courses. RateMyCourse will also contain a function to compare two courses side by side, providing a user friendly interface for students deciding between multiple classes.
+   
    In terms of the RateMyCourse interface, Team Course Warriors seeks to build a well-organized user interface that consists of drop down menus and tabs for fluid functionality. The user interface will be built with a focus on simplicity, readability, and efficiency. Any student at CU Boulder should be able to access information on his or her courses without spending an excessive amount of time. To accomplish these goals, we plan on creating an easy to use web application using the google API, which will provide a base template for the user interface of our application. Given the relatively small amount of data we will be working with and the infrequency of the updates made to it, we believe managing our database should be simple enough to implement using common coding languages such as Python.
+   
    The data for RateMyCourse will be mostly constructed from an FCQ excel spreadsheet available on the official CU Boulder website and user input.  This information will be poured into our database using a standard in script, and sorted correctly using code in Python. We have high hopes for this project and think those students at CU will benefit greatly from it.
 
     
@@ -52,6 +54,13 @@
 5. By directly identifying the ideas that separate us from other websites, we can focus our efforts around what makes our idea unique and different.
 
 
+
 ## Software Development Methodology:
 
    Our team will be following the Agile Software Method. We picked this method because it promotes teamwork and aims to produce working software as opposed to beautiful documentation. An important aspect of Agile teamwork is pair programming. Through pair programming those who are not as experienced with developing software (front end/back end) can be more familiar with the orientation of programming. On days that we pair program, we plan to develop code in two groups of three. One group will focus on the client-side scripting while the other will focus on the server-side scripting. Another advantage of Agile environments is fostering a constantly changing environment. Currently our software’s goal is to provide feedback about courses at CU, but down the road we intend to implement many amazing features into this web application. One of the features includes incorporating your degree audit so students can view which future courses will satisfy degree requirements. Once functionality has been tested at CU, we may expand to other universities as well. Any other input regarding functionality of the application will be gathered through surveys. Surveys will be printed and distributed in a few rooms in the library to get a general feedback. The library is a good setting for students to conduct the survey because it is a time when your courses are concerning to you. 
+   
+## Version Control:
+	In order to have one place to store all code associated with this project, Team Course Warriors will be utilizing GitHub. 
+
+## Collaboration Tool:
+	The Collaboration Tool Team Course Warriors will be using to communicate is Slack and email.
