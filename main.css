@@ -1,9 +1,15 @@
+ #html{
+    max-width:100%;
+    margin:0;
+}
 
 p.text1
 {
-  color:#ffffff;
-    width:300px;
-    margin-left:350px;
+  color:white;
+  text-align: center;
+  font-family: Century Gothic, sans-serif;
+  font-size: 22px;
+    font-size-adjust: .58;
 }
 
 body {
@@ -12,28 +18,57 @@ body {
     /*color: #ffffff; changes the <p> text colors */
     background-size: cover;
     background-repeat: no-repeat;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 16px;
+    background-attachment: fixed;
     line-height: 1.5;
     margin: 0 auto;
     max-width:960px;
-    padding: 2em 2em 4em;
-    
+    padding: 2em 2em 4em; /* spaces the elemnts from eachother  */
+    z-index:-1;
+    -webkit-text-size-adjust: auto;
+  overflow-y: hidden; /* prevent vertical scroll */
+overflow-x: hidden; /* prevent horizontal scroll */
+}
+
+/* use this CSS class to blur image */
+.background{
+    filter: blur(100px);
+}
+
+/* page content besides the image_background */
+#content{
+    position:fixed;
+    max-width:100%;
 }
 
 #search{
-    margin-left:250px;
+    font-size:20px; /* font size in search box */
+    margin-left:100px;
+    width:750px;
+    height:50px;
+    font-family: Century Gothic, sans-serif;
+    border-radius:12px; /* effects search box roundness  */  
+}
+
+.btnSearch{
+    border-radius:5px;
+    height:25px;
+    
 }
 
 p.text2
 {
-color:#ffffff;
-margin-left:250px;
+color:white;
+text-align: center;
+    font-family: Century Gothic, sans-serif;
+     font-size: 22px;
+    margin-top:500px;
 }
 
 h1{
   color:#ffffff;
-   margin-left:350px;
+   font-family: Century Gothic, sans-serif;
+     text-align: center;
+     font-size: 22px;
 }
 
  h2, h3, h4, h5, h6 {
