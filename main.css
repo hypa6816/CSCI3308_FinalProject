@@ -40,7 +40,7 @@ overflow-x: hidden; /* prevent horizontal scroll */
     max-width:100%;
 }
 
-#search{
+input.search_box{
     font-size:20px; /* font size in search box */
     margin-left:100px;
     width:750px;
