@@ -5,7 +5,9 @@ We had to install another server application to link the mysql database with our
 1. Install XAMP (ensure it has the  apache and mySQL tools)
 2. Put all relavent files in htdocs
 3. start the XAMP control and start an apache and mysql server instance
-4. go to your local browser and type in the http://localhost:<port_number>/<folder_name in htdocs>/<file_name you wish to see>
+4. go to your local browser and type in the http://localhost:81/<folder_name in htdocs>/<file_name you wish to see>
+
+IF YOU DO NOT USE PORT 81 YOU WILL REFRESH EACH RESULTING PAGE WHICH IS ANNOYING AS HELL
 
 Thats it!
 
