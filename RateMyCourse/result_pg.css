@@ -1,0 +1,63 @@
+body{
+  background-image: url(http://snowbrains.com/wp-content/uploads/2015/10/the-flatirons-boulder-colorado-hd-wallpaper1.jpg);
+   /* box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);  */
+    /*color: #ffffff; changes the <p> text colors */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0 auto;
+    max-width: 100%; 
+overflow-x: hidden; /* prevent horizontal scroll */
+}
+
+img{
+    width:100px;
+    height:100px;
+    margin-left:25px;
+    margin-top:25px;
+}
+
+p.result_title{
+    float:right;
+    margin-right:1000px;
+    font-size:50px;
+color:white;
+text-shadow:1px 1px 0 #fff,
+-1px -1px 0 #fff,
+1px -1px 0 #fff,
+-1px 1px 0 #fff,
+0px 1px 0 #fff,
+1px 0px 0 #fff,
+0px -1px 0 #fff,
+-1px 0px 0 #fff,
+4px 4px 3px #000;
+font-family: Century Gothic, sans-serif;
+}
+
+/*resulting list as element*/
+ul{
+    margin-top:50px;
+    font-size:18px;
+}
+
+/*resulting list as text elements*/
+a{
+    font-size:50px;
+color:white;
+text-shadow:1px 1px 0 #fff,
+-1px -1px 0 #fff,
+1px -1px 0 #fff,
+-1px 1px 0 #fff,
+0px 1px 0 #fff,
+1px 0px 0 #fff,
+0px -1px 0 #fff,
+-1px 0px 0 #fff,
+4px 4px 3px #000;
+font-family: Century Gothic, sans-serif;
+}
+
+
+result_title_wrap{
+   
+}
+
