@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <link rel="stylesheet" type="text/css">
+      <link rel="stylesheet" type="text/css"
+            href="content_pg.css">
 
     </head>
 
     <body>
-        <h1>Content Page </h1>
+        
         <?php
             $CourseTitle = $_GET['CourseTitle']; // Get Course_title from results_pg.php
             $db = mysql_connect('104.198.161.89', 'prototypeuser', 'flatiron'); //connnect to our mysql base
@@ -16,7 +17,7 @@
                 die();
             }
             $my_db = mysql_select_db('RateMyCourse'); //select our data base
-            echo "<p> Course Information for $CourseTitle </p>";
+            echo "<p>  $CourseTitle </p>";
         
             $SubjectQuery = "select Subject from CourseName where CourseTitle like '%$CourseTitle%'";
             $CourseNumQuery = "select Course from CourseName where CourseTitle like '%$CourseTitle%'";
@@ -45,7 +46,6 @@
 //            echo "<p> Average percent of Students Who Got a D or a F: </p>";
 //            echo "<p class='rows'>".$GradeRow['avg(PCT_DF)']."</p>";
 //            echo "</ul>"; 
-
         ?>
             
               <!-- Google Visualization Tool Setup -->
@@ -58,15 +58,25 @@
                 // Create and populate the data table.
                 var data = google.visualization.arrayToDataTable([
                     ['Grade', 'Average % of people who got that grade'],
-                    ['PCT_A', <?php echo $GradeRow['avg(PCT_A)'] ?>],
-                    ['PCT_B', <?php echo $GradeRow['avg(PCT_B)'] ?>],
-                    ['PCT_C', <?php echo $GradeRow['avg(PCT_C)'] ?>],
-                    ['PCT_DF', <?php echo $GradeRow['avg(PCT_DF)'] ?>] 
+                    ['A', <?php echo $GradeRow['avg(PCT_A)'] ?>],
+                    ['B', <?php echo $GradeRow['avg(PCT_B)'] ?>],
+                    ['C', <?php echo $GradeRow['avg(PCT_C)'] ?>],
+                    ['D F', <?php echo $GradeRow['avg(PCT_DF)'] ?>] 
                 ]);
                 //Different options for the graph
                 var options = { 
                     title: 'Grade Distribution',
                     is3D: true,
+                    backgroundColor:'none',
+                    colors:['gold','black','grey','white'],
+                    titleTextStyle:
+                    {
+                        color:'white',
+                    },
+                   legendTextStyle:{
+                    color:'white',
+                },
+
                 };
                 // Create and draw the visualization .
                 var chart = new google.visualization.PieChart(document.getElementById('piechart_3d')); // getElementById declares which container we want to put in ie. our div id = piechart_3d
