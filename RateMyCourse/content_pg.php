@@ -8,6 +8,8 @@
 
     <body>
         
+        <img src="http://www.colorado.edu/catalog/2016-17/sites/all/themes/cuminimal/logo.png"> 
+        
         <?php
             $CourseTitle = $_GET['CourseTitle']; // Get Course_title from results_pg.php
             $db = mysql_connect('104.198.161.89', 'prototypeuser', 'flatiron'); //connnect to our mysql base
@@ -31,11 +33,25 @@
             echo "<ul>\n";
             echo "<p class='SubjectRows'>".$SubjectRow->Subject."</p>"; //Display 4 Letter abrv. Course Subject         
             echo "<p class='CourseNumRows'>".$CourseNumRow->Course."</p>"; // Display 4 Number Course Number
+ 
+        /* queries for each data visualization  */
         
+        //GRADE DISTRIBUTION QUERY
             $GradeDistQuery = "select avg(PCT_A),avg(PCT_B),avg(PCT_C),avg(PCT_DF) from GradeDistribution where Course = $CourseNumRow->Course and Subject='$SubjectRow->Subject' "; // query which fetches the averaged grade pctgs for all semesters of the course specidied by Course Subject and Course Number
             $GradeDistResult = mysql_query($GradeDistQuery);
             $GradeRow=mysql_fetch_assoc($GradeDistResult); //Result of the Grade Dist Query returned as an associatve array
         //This was just a debug print uncomment if you want to see the numbers match up between the piechart and what the query returned
+        
+        //GRADE RATING QUERY
+        $GradeRatingQuery = "select AverageGrade from CourseDifficulty where Course =$CourseNumRow->Course and Subject='$SubjectRow->Subject'";
+        $GradeRatingResult = mysql_query($GradeRatingQuery);
+        $RatingRow = mysql_fetch_assoc($GradeRatingResult);
+        
+        //HOURS SPENT QUERY
+        $HoursSpentQuery = "select AverageHours from CourseDifficulty where Course =$CourseNumRow->Course and Subject='$SubjectRow->Subject'";
+        $HoursSpentResult = mysql_query($HoursSpentQuery);
+        $HourRow = mysql_fetch_assoc($HoursSpentResult);
+        
 //            echo "<ul>\n";
 //            echo "<p> Average percent of Students Who Got an A: </p>";
 //            echo "<p class='rows'>".$GradeRow['avg(PCT_A)']."</p>";
@@ -52,8 +68,9 @@
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> <!-- Load API -->
         <!-- Actual Implementation of Visualization Tool -->
         <script type="text/javascript"> 
-          google.charts.load("current", {packages:["corechart"]}); // Load the chart package you want to use
-          google.charts.setOnLoadCallback(drawChart); // Declares when to load the chart in our case instantly or when the page loads
+          google.charts.load("current", {packages:["corechart","gauge"]}); // Load the chart package you want to use
+          google.charts.setOnLoadCallback(drawChart); 
+        google.charts.setOnLoadCallback(drawGauge);// Declares when to load the chart in our case instantly or when the page loads
             function drawChart() {
                 // Create and populate the data table.
                 var data = google.visualization.arrayToDataTable([
@@ -82,9 +99,46 @@
                 var chart = new google.visualization.PieChart(document.getElementById('piechart_3d')); // getElementById declares which container we want to put in ie. our div id = piechart_3d
                 chart.draw(data, options); // make chart with given paramaters
             }
-        </script>
 
-        <div id="piechart_3d" style="width: 600px; height: 400px;"></div> <!--Container for Chart-->
+function drawGauge() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Label', 'Value'],
+          ['Average Rating', <?php echo $RatingRow['AverageGrade'] ?>],
+          ['Average Hours', <?php echo $HourRow['AverageHours'] ?>],
+          
+        ]);
+
+        var options = {
+          width: 800, height: 240,
+          max:6,
+        };
+
+        var chart = new google.visualization.Gauge(document.getElementById('chart_div'));
+
+        chart.draw(data, options);
+            setInterval(function() {
+          data.setValue();   //setValue(NULL) = NO STUPID TICKING
+          chart.draw(data, options);
+        }, 13000);
+        setInterval(function() {
+          data.setValue(); //setValue(NULL) = NO STUPID TICKING
+          chart.draw(data, options);
+        }, 5000);
+        setInterval(function() {
+          data.setValue(); //setValue(NULL) = NO STUPID TICKING
+          chart.draw(data, options);
+        }, 26000); 
+      }
+
+        </script>
+        
+
+        <div id="piechart_3d" style="width: 600px; height: 400px; margin-left: 115px;"></div> <!--Container for Chart-->
+        <div id="chart_div" style="width: 400px; height: 120px; margin-left: 750px; margin-top:-500px;"></div>
+        
+
+        
         
     </body>
 </html>
