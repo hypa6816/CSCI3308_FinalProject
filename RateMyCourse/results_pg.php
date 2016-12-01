@@ -17,6 +17,9 @@
             
             //use EXPLODE to parse the JSON string so users can search by acronym
             list($prefix,$suffix) = explode(" ","$SearchedCourseTitle ");
+        
+            //users can search by just acronym prefix
+            $subject = explode(" ","$SearchedCourseTitle ");
            
             
         $db = mysql_connect('104.198.161.89', 'prototypeuser', 'flatiron'); //connnect to our mysql base
@@ -26,7 +29,7 @@
             }
             $my_db = mysql_select_db('RateMyCourse'); //select our data base
             //TODO: Make sure this is the best way to look for courses or implement more search methods
-            $search_query = "select distinct CourseTitle from CourseName where CourseTitle like '%$SearchedCourseTitle%' or (subject like '$prefix' or course like '$suffix') order by CourseTitle" ; // mysql query 
+            $search_query = "select distinct CourseTitle from CourseName where CourseTitle like '%$SearchedCourseTitle%' or (subject like '$prefix' and course like '$suffix') or (subject like '$subject[1]') order by CourseTitle" ; // mysql query 
         
        
         
