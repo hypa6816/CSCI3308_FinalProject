@@ -79,7 +79,7 @@
                     ['A', <?php echo $GradeRow['avg(PCT_A)'] ?>],
                     ['B', <?php echo $GradeRow['avg(PCT_B)'] ?>],
                     ['C', <?php echo $GradeRow['avg(PCT_C)'] ?>],
-                    ['D F', <?php echo $GradeRow['avg(PCT_DF)'] ?>] 
+                    ['D, F', <?php echo $GradeRow['avg(PCT_DF)'] ?>] 
                 ]);
                 //Different options for the graph
                 var options = { 
