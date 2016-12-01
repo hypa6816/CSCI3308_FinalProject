@@ -46,4 +46,38 @@ img{
     margin-top:25px;
 }
 
+/*------ TABLE ELEMENTS --------*/
+
+CSSheaderRow{
+    background-color:green;
+}
+
+CSStableRow{
+     background-color:green;
+}
+
+CSSoddTableRow{
+    background-color:green;
+}
+
+CSSselectedTableRow{
+    background-color:green;
+}
+
+CSShoverTableRow{
+   background-color:green;
+}
+
+CSSheaderCell{
+    background-color:green;
+}
+
+CSStableCell{
+    background-color:green;
+}
+
+CSSrowNumberCell{
+   background-color:green;
+}
+
 
