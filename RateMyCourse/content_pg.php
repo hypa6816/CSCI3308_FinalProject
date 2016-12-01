@@ -68,9 +68,10 @@
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> <!-- Load API -->
         <!-- Actual Implementation of Visualization Tool -->
         <script type="text/javascript"> 
-          google.charts.load("current", {packages:["corechart","gauge"]}); // Load the chart package you want to use
+          google.charts.load("current", {packages:["corechart","gauge","table"]}); // Load the chart package you want to use
           google.charts.setOnLoadCallback(drawChart); 
-        google.charts.setOnLoadCallback(drawGauge);// Declares when to load the chart in our case instantly or when the page loads
+        google.charts.setOnLoadCallback(drawGauge);
+        google.charts.setOnLoadCallback(drawTable);// Declares when to load the chart in our case instantly or when the page loads
             function drawChart() {
                 // Create and populate the data table.
                 var data = google.visualization.arrayToDataTable([
@@ -105,7 +106,7 @@ function drawGauge() {
         var data = google.visualization.arrayToDataTable([
           ['Label', 'Value'],
           ['Average Rating', <?php echo $RatingRow['AverageGrade'] ?>],
-          ['Average Hours', <?php echo $HourRow['AverageHours'] ?>],
+          
           
         ]);
 
@@ -130,15 +131,39 @@ function drawGauge() {
           chart.draw(data, options);
         }, 26000); 
       }
+            
+            
+            var cssClassNames = {
+        'headerRow': 'CSSheaderRow',
+        'tableRow': 'CSStableRow',
+        'oddTableRow': 'CSSoddTableRow',
+ 'selectedTableRow':'CSSselectedTableRow',
+        'hoverTableRow':'CSShoverTableRow',
+        'headerCell':'CSSheaderCell',
+        'tableCell':'CSStableCell',
+        'rowNumberCell':'CSSrowNumberCell',
+    };
+    
+    function drawTable() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('number', 'Average Hours Spent Per Week');
+        data.addRows([
+          [<?php echo $HourRow['AverageHours'] ?>],
+            
+        ]);
+
+        var table = new google.visualization.Table(document.getElementById('table_div'));
+
+        table.draw(data, {showRowNumber: false, width: '100%', height: '100%', sort:'disable','cssClassNames': cssClassNames,});
+      }
+ 
+      
 
         </script>
-        
-
+          
         <div id="piechart_3d" style="width: 600px; height: 400px; margin-left: 115px;"></div> <!--Container for Chart-->
         <div id="chart_div" style="width: 400px; height: 120px; margin-left: 750px; margin-top:-500px;"></div>
-        
-
-        
-        
+        <div id="table_div" style="width: 200px; height: 200px; margin-left:1100px; margin-top:-100px;"></div>
+             
     </body>
 </html>
