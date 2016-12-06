@@ -40,7 +40,7 @@
                 ?>
 
                 <p class ='text1'>
-                    Over 6,000 courses' FCQ information on ratings, difficulty, grade distribution, and hours spent right at your finger tips.
+                    Over 4,800 courses' FCQ information on ratings, difficulty, grade distribution, and hours spent right at your finger tips.
                 </p>
 
                 <p class ='text2'>
