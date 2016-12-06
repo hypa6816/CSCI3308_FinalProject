@@ -122,8 +122,6 @@
                 var data = google.visualization.arrayToDataTable([
                   ['Label', 'Value'],
                   ['Course Difficulty', <?php echo $DifficultyRow['AverageGrade'] ?>],
-
-
                 ]);
                 var options = {
                   width: 800, height: 240,
@@ -133,7 +131,6 @@
                   redFrom:5, redTo:6,
                   majorTicks:6,
                   minorTicks:4,
-
                   //is3d: true,
                 };
                 var chart = new google.visualization.Gauge(document.getElementById('chart_div'));
@@ -151,8 +148,6 @@
                   chart.draw(data, options);
                 }, 26000); 
               }
-
-
                 var cssClassNames = {
                     'headerRow': 'CSSheaderRow',
                     'tableRow': 'CSStableRow',
@@ -163,13 +158,11 @@
                     'tableCell':'CSStableCell',
                     'rowNumberCell':'CSSrowNumberCell',
             };
-
             function drawTable() {
                 var data = new google.visualization.DataTable();
                 data.addColumn('string', 'Average Hours Spent Per Week');
                 data.addRows([
                   [<?php echo $HourRange ?>],
-
                 ]);
                 var table = new google.visualization.Table(document.getElementById('table_div'));
                 table.draw(data, {showRowNumber: false, width: '100%', height: '100%', sort:'disable','cssClassNames': cssClassNames,});
@@ -191,7 +184,6 @@
                 data.addColumn('number', 'Course Rating');
                 data.addRows([
                   [<?php echo $RatingRow['CourseRating'] ?>],
-
                 ]);
                 
                 
@@ -205,7 +197,7 @@
         <div id="piechart_3d" style="width: 600px; height: 400px; margin-left: 115px;"></div> <!--Container for Chart-->
         <div id="chart_div" style="width: 400px; height: 120px; margin-left: 750px; margin-top:-500px;"></div>
         <div id="table_div" style="width: 200px; height: 200px; margin-left:1100px; margin-top:-100px;"></div>
-        <div id="table_div_rating" style="width: 200px; height: 200px; margin-left:1100px; margin-top:400px;"></div>
+        <div id="table_div_rating" style="width: 200px; height: 200px; margin-left:900px; margin-top:25px;"></div>
              
     </body>
 </html>
