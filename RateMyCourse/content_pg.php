@@ -126,9 +126,9 @@
                 var options = {
                   width: 800, height: 240,
                   max:6,
-                  greenFrom:0,greenTo:2,
+                  greenFrom:5,greenTo:6,
                   yellowFrom:4,yellowTo:5,
-                  redFrom:5, redTo:6,
+                  redFrom:0, redTo:2,
                   majorTicks:6,
                   minorTicks:4,
                   //is3d: true,
