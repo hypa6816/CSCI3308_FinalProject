@@ -8,6 +8,7 @@ body{
     margin: 0 auto;
     max-width: 100%; 
 overflow-x: hidden; /* prevent horizontal scroll */
+    zoom: 80%;
 }
 
 p{
@@ -46,38 +47,148 @@ img{
     margin-top:25px;
 }
 
-/*------ TABLE ELEMENTS --------*/
+/*     remove ugly white border from both tables */
 
-CSSheaderRow{
-    background-color:green;
+            .google-visualization-table-table  td.CSStableCellRATING      
+   {
+        border:0px;
+        border-width:0px;
+   }
+
+.google-visualization-table-table th.CSSheaderCellRATING
+   {
+        border:0px;
+        border-width:0px;
+   }
+
+ .google-visualization-table-table  td.CSStableCellHOUR      
+   {
+        border:0px;
+        border-width:0px;
+   }
+
+.google-visualization-table-table th.CSSheaderCellHOUR
+   {
+        border:0px;
+        border-width:0px;
+   }
+/*------ COURSE RATING TABLE ELEMENTS --------*/
+
+CSSheaderRowRATING{
+    
 }
 
-CSStableRow{
-     background-color:green;
+/* initial background color of table  */
+tr.CSStableRowRATING{
+     background-color:#808080; /* initially black  */
+    border:none;
 }
 
-CSSoddTableRow{
-    background-color:green;
+tr.CSSoddTableRowRATING{
+    
 }
 
-CSSselectedTableRow{
-    background-color:green;
+CSSselectedTableRowRATING{
+    background-color:gold; /* no hovering on mobile  */
+    border:none;
 }
 
-CSShoverTableRow{
+/*   background color of table when mouse hovers over      tr = table row    */
+tr.CSShoverTableRowRATING{
+   background-color:gold;
+border: none
+}
+
+/*  header background    */
+th.CSSheaderCellRATING{
+    background:black;
+    /*  text within header */
+    color:white;
+    font-family: 'Orbitron', sans-serif;
+    font-size:20px;
+    border:none;
+}
+
+/* data within table  */
+td.CSStableCellRATING{
+    font-size: 50px;
+    font-family: 'Orbitron', sans-serif;
+    color:white;
+    border: none;
+}
+
+CSSrowNumberCellRATING{
+   
+}
+
+/*------ HOURS SPENT TABLE ELEMENTS --------*/
+
+/* background of header  */
+CSSheaderRowHOUR{
+    border: none;
+}
+
+/*  initial background of table    */
+tr.CSStableRowHOUR{
+     background:gold; 
+    border:none;
+}
+
+CSSoddTableRowHOUR{
+    
+}
+
+CSSselectedTableRowHOUR{
+   
+}
+
+/*   background color of table when the mouse hovers over     tr = table row    */
+tr.CSShoverTableRowHOUR{
+   background-color:black;
+    border: none;
+}
+
+/* header background    */
+th.CSSheaderCellHOUR{
+    background:#DAA520;
+    /*  text within header */
+    color:white;
+    font-family: 'Orbitron', sans-serif;
+    font-size:20px;
+    border: none;
+}
+
+/* data within table       td = table data */
+td.CSStableCellHOUR{
+    font-size: 50px;
+    font-family: 'Orbitron', sans-serif;
+    color:white;
+ 
+}
+
+CSSrowNumberCellHOUR{
    background-color:green;
 }
 
-CSSheaderCell{
-    background-color:green;
+/*       horizontal_wrapper for the tables WHICH IS within the wrapper for all the charts   */
+#horizontal_wrapper{
+    margin:0;
+    display:inline;
 }
 
-CSStableCell{
-    background-color:green;
+/* wrapper for all the charts  */
+
+#chart_wrapper{
+    margin:0;
 }
 
-CSSrowNumberCell{
-   background-color:green;
+text{
+    font-size: 17px;
+    font-family: 'Orbitron', sans-serif;
+    color:white;
 }
 
+thead{
+    border:0;
+}
 
