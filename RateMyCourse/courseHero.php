@@ -10,8 +10,9 @@
         <link rel="stylesheet"  type="text/css" href="main.css"> 
         <script language="javascript" type="text/javascript" src="js/jquery-2.2.0.js"></script> <!--// java include-->
     </head>
-    
+      
     <body>
+        <img src="http://www.colorado.edu/catalog/2016-17/sites/all/themes/cuminimal/logo.png"> 
         <div class="background-image">
             <div class="content">
                 <h1>RateMyCourse</h1>       
