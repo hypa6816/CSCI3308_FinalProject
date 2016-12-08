@@ -3,6 +3,7 @@
     <head>
       <link rel="stylesheet" type="text/css"
             href="content_pg.css">
+        <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
 
     </head>
 
@@ -108,10 +109,23 @@
                     titleTextStyle:
                     {
                         color:'white',
+                        fontName: 'Orbitron',
+                        fontSize: 30,
+                        bold:false,
                     },
                    legendTextStyle:{
                     color:'white',
+                       fontName: 'Orbitron',
+                        fontSize: 20,
+                        bold:false,
                 },
+                    pieSliceTextStyle:
+                    {
+                        color:'white',
+                        fontName: 'Orbitron',
+                        fontSize: 18,
+                        bold:true,
+                    },
                 };
                 // Create and draw the visualization .
                 var chart = new google.visualization.PieChart(document.getElementById('piechart_3d')); // getElementById declares which container we want to put in ie. our div id = piechart_3d
@@ -126,14 +140,15 @@
                 var options = {
                   width: 800, height: 240,
                   max:6,
-                  greenFrom:5,greenTo:6,
-                  yellowFrom:4,yellowTo:5,
-                  redFrom:0, redTo:2,
+                  greenFrom:3.3,greenTo:6,
+                  yellowFrom:2.7,yellowTo:3.3,
+                  redFrom:0, redTo:2.7,
                   majorTicks:6,
                   minorTicks:4,
-                  //is3d: true,
+                  is3d: true,
+                   
                 };
-                var chart = new google.visualization.Gauge(document.getElementById('chart_div'));
+                var chart = new google.visualization.Gauge(document.getElementById('gauge_div'));
                 chart.draw(data, options);
                     setInterval(function() {
                   data.setValue();   //setValue(NULL) = NO STUPID TICKING
@@ -148,15 +163,17 @@
                   chart.draw(data, options);
                 }, 26000); 
               }
-                var cssClassNames = {
-                    'headerRow': 'CSSheaderRow',
-                    'tableRow': 'CSStableRow',
-                    'oddTableRow': 'CSSoddTableRow',
-                    'selectedTableRow':'CSSselectedTableRow',
-                    'hoverTableRow':'CSShoverTableRow',
-                    'headerCell':'CSSheaderCell',
-                    'tableCell':'CSStableCell',
-                    'rowNumberCell':'CSSrowNumberCell',
+            
+            /*  HOUR TABLE     */
+                var cssClassNamesHOUR = {
+                    'headerRow': 'CSSheaderRowHOUR',
+                    'tableRow': 'CSStableRowHOUR',
+                    'oddTableRow': 'CSSoddTableRowHOUR',
+                    'selectedTableRow':'CSSselectedTableRowHOUR',
+                    'hoverTableRow':'CSShoverTableRowHOUR',
+                    'headerCell':'CSSheaderCellHOUR',
+                    'tableCell':'CSStableCellHOUR',
+                    'rowNumberCell':'CSSrowNumberCellHOUR',
             };
             function drawTable() {
                 var data = new google.visualization.DataTable();
@@ -164,19 +181,21 @@
                 data.addRows([
                   [<?php echo $HourRange ?>],
                 ]);
-                var table = new google.visualization.Table(document.getElementById('table_div'));
-                table.draw(data, {showRowNumber: false, width: '100%', height: '100%', sort:'disable','cssClassNames': cssClassNames,});
+                var table = new google.visualization.Table(document.getElementById('table_div_hours'));
+                table.draw(data, {showRowNumber: false, width: '100%', height: '100%', sort:'disable','cssClassNames': cssClassNamesHOUR,});
               }
             
-            var cssClassNames1 = {
-                    'headerRow': 'CSSheaderRow',
-                    'tableRow': 'CSStableRow',
-                    'oddTableRow': 'CSSoddTableRow',
-                    'selectedTableRow':'CSSselectedTableRow',
-                    'hoverTableRow':'CSShoverTableRow',
-                    'headerCell':'CSSheaderCell',
-                    'tableCell':'CSStableCell',
-                    'rowNumberCell':'CSSrowNumberCell',
+            /*     RATING TABLE */
+            
+            var cssClassNamesRATING = {
+                    'headerRow': 'CSSheaderRowRATING',
+                    'tableRow': 'CSStableRowRATING',
+                    'oddTableRow': 'CSSoddTableRowRATING',
+                    'selectedTableRow':'CSSselectedTableRowRATING',
+                    'hoverTableRow':'CSShoverTableRowRATING',
+                    'headerCell':'CSSheaderCellRATING',
+                    'tableCell':'CSStableCellRATING',
+                    'rowNumberCell':'CSSrowNumberCellRATING',
             };
             
             function drawTable_rating() {
@@ -188,16 +207,18 @@
                 
                 
                 var table_rating = new google.visualization.Table(document.getElementById('table_div_rating'));
-                table_rating.draw(data, {showRowNumber: false, width: '100%', height: '100%', sort:'disable','cssClassNames': cssClassNames1,});
+                table_rating.draw(data, {showRowNumber: false, width: '100%', height: '100%', sort:'disable','cssClassNames': cssClassNamesRATING,});
               }
  
       
         </script>
-          
-        <div id="piechart_3d" style="width: 600px; height: 400px; margin-left: 115px;"></div> <!--Container for Chart-->
-        <div id="chart_div" style="width: 400px; height: 120px; margin-left: 750px; margin-top:-500px;"></div>
-        <div id="table_div" style="width: 200px; height: 200px; margin-left:1100px; margin-top:-100px;"></div>
-        <div id="table_div_rating" style="width: 200px; height: 200px; margin-left:900px; margin-top:25px;"></div>
-             
+          <div id="chart_wrapper">
+        <div id="piechart_3d" style="width: 800px; height: 400px; margin-left: 50px;  "></div> <!--Container for Chart-->
+        <div id="gauge_div" style="width: 400px; height: 120px; margin-left: 825px; margin-top:-550px;"></div>
+        <div id="horizontal_wrapper">
+        <div id="table_div_rating" style="width: 200px; height: 200px;  padding-left:1025px; position: absolute; padding-top:140px;"></div>
+        <div id="table_div_hours" style="width: 200px; height: 200px; padding-left:675px; margin-top:140px; "></div>
+             </div>
+              </div>
     </body>
 </html>
