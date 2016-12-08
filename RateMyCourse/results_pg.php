@@ -8,9 +8,11 @@
       
         
         <div id="result_title_wrap">
-        <img src="http://www.colorado.edu/catalog/2016-17/sites/all/themes/cuminimal/logo.png"> 
+        <img src="http://www.colorado.edu/catalog/2016-17/sites/all/themes/cuminimal/logo.png">
+            <p class ="select_title">Select a course from the list below</p>
       <p class ="result_title">RateMyCourse</p>
             </div>
+        
         
           <?php
             $SearchedCourseTitle = $_GET['SearchQuery']; // get the SearchQuery from courseHero.php 
