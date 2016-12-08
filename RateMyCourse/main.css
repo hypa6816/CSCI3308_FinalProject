@@ -1,6 +1,7 @@
 #html{
     max-width:100%;
     margin:0;
+ 
 }
 
 p.text1
@@ -10,10 +11,14 @@ p.text1
   font-family: Century Gothic, sans-serif;
   font-size: 22px;
     font-size-adjust: .58;
+    width:960px;
+    margin:0;
+    padding-left:300px;
 }
 
 body {
     background-image: url(https://s-media-cache-ak0.pinimg.com/originals/49/94/4c/49944c22e23b5e8606be5f53a06cdb72.jpg);
+    
    /* box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);  */
     /*color: #ffffff; changes the <p> text colors */
     background-size: cover;
@@ -21,17 +26,15 @@ body {
     background-attachment: fixed;
     line-height: 1.5;
     margin: 0 auto;
-    max-width:960px;
+    max-width:1600px;
     padding: 2em 2em 4em; /* spaces the elemnts from eachother  */
     z-index:-1;
     -webkit-text-size-adjust: auto;
   overflow-y: hidden; /* prevent vertical scroll */
 overflow-x: hidden; /* prevent horizontal scroll */
-}
-
-/* use this CSS class to blur image */
-.background{
-    filter: blur(100px);
+    /*   initial zoom at 80% for all browsers   */
+    
+zoom:80%;
 }
 
 /* page content besides the image_background */
@@ -42,7 +45,7 @@ overflow-x: hidden; /* prevent horizontal scroll */
 
 input.search_box{
     font-size:20px; /* font size in search box */
-    margin-left:100px;
+    margin-left:275px;
     width:750px;
     height:50px;
     font-family: Century Gothic, sans-serif;
@@ -62,6 +65,14 @@ text-align: center;
     font-family: Century Gothic, sans-serif;
      font-size: 22px;
     margin-top:500px;
+}
+
+img{
+    width:100px;
+    height:100px;
+    float:left;
+    margin-left:-6px;
+    margin-top:-2px;
 }
 
 
@@ -94,16 +105,6 @@ samp {
     display: none;
 }
 
-img {
-    -webkit-animation: colorize 2s cubic-bezier(0, 0, .78, .36) 1;
-            animation: colorize 2s cubic-bezier(0, 0, .78, .36) 1;
-    background: transparent;
-    border: 10px solid rgba(0, 0, 0, 0.12);
-    border-radius: 4px;
-    display: block;
-    margin: 1.3em auto;
-    max-width: 95%;
-}
 
 @-webkit-keyframes colorize {
     0% {
