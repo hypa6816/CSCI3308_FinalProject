@@ -7,7 +7,7 @@ We had to install another server application to link the mysql database with our
 3. start the XAMP control and start an apache and mysql server instance
 4. go to your local browser and type in the http://localhost:81/<folder_name in htdocs>/<file_name you wish to see>
 
-IF YOU DO NOT USE PORT 81 YOU WILL REFRESH EACH RESULTING PAGE WHICH IS ANNOYING AS HELL
+Make sure to use Port 81.
 
 Thats it!
 
